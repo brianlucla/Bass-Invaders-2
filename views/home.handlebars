@@ -17,7 +17,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-
+    
             <a class="navbar-brand" href="#">
                 <img src="/images/logo.png" alt="Logo" height="40">
             </a>
@@ -25,8 +25,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse container-fluid" id="navbarNav"
-                style="justify-content: space-between;">
+            <div class="collapse navbar-collapse container-fluid" id="navbarNav" style="justify-content: space-between;">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="btn btn-primary" href="#main-container">Search</a>
@@ -37,17 +36,21 @@
                     <li class="nav-item">
                         <a class="btn btn-primary" href="#fav-container">Favorites</a>
                     </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="#aboutUsBackground">About Us</a>
+                    </li>
                 </ul>
                 <div class="d-flex">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLogin">
                         Log In / Sign Up
                     </button>
-                    <button type="button" class="btn btn-primary" id="sign-out">
+                    <button type="button" class="btn btn-primary">
                         Sign Out
                     </button>
-
+    
                 </div>
-
+    
             </div>
     </nav>
 
@@ -74,12 +77,12 @@
                                         <form>
                                             <div class="form-group">
                                                 <label for="email">EMAIL:</label>
-                                                <input type="email" class="form-control" id="email" placeholder="">
+                                                <input type="email" class="form-control" id="email" placeholder="Enter Email">
                                             </div>
                                             <div class="form-group">
                                                 <label for="password">PASSWORD:</label>
                                                 <input type="password" class="form-control" id="password"
-                                                    placeholder="">
+                                                    placeholder="Enter Password">
                                             </div>
                                             <div class="form-button-actions">
                                                 <button type="submit" id="sign-in-btn" class="btn btn-primary">SIGN
@@ -112,7 +115,7 @@
                                         <div class="form-group">
                                             <label for="signupPassword">PASSWORD:</label>
                                             <input type="password" class="form-control" id="signupPassword"
-                                                placeholder="Password">
+                                                placeholder="Enter Password">
                                         </div>
                                         <button type="submit" class="btn btn-primary" id="sign-up-btn">Sign Up</button>
                                         <!-- onclick should flipped when link is clicked -->
@@ -145,7 +148,7 @@
         <div class="search-container">
             <div class="search-box">
                 <div class="search-form">
-                    <input type="text" class="search-input form-control" placeholder="What's the mood / occassion?"
+                    <input type="text" class="search-input form-control" placeholder="What's the mood / occasion?"
                         id="search-song">
                     <button type="submit" class="btn btn-primary" id="submit-song">Search</button>
 
@@ -216,55 +219,12 @@
                         </button>
                     </div>
                 </div>
-                <div class="box-right box-container">
-                    <h2>Get pumped up!</h2>
-                    <div id="carouselLeft" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselLeft" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselLeft" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselLeft" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item"
-                                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item"
-                                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item"
-                                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLeft"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselLeft"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     <!-- begin about us section -->
 
-    <div #=aboutUs id="aboutUsBackground" style="background-image: url('/images/aboutUs8.avif');">
+    <div #=aboutUs id="aboutUsBackground" style="background-image: url('/images/bg-Hero.jpg');">
         <div class="about-us-container">
             <div class="row">
                 <div class="col-md-6">
