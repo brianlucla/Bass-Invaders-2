@@ -123,6 +123,8 @@ h1 {
     align-items: center;
     margin-bottom: 10px;
 }
+
+
   
 .search-input {
     flex: 1;
@@ -142,7 +144,7 @@ h1 {
     max-width: 650px;
     padding: 5rem;
     border-radius: 10px;
-    background-color: #444b52;
+    background-color: white;
 }
   
 
@@ -330,7 +332,7 @@ h1 {
 }
 
 .form-control {
-    background: #444b52 !important;
+    background: white !important;
     border: none !important;
     color: #ffffff !important;
     padding: 14px 16px;
