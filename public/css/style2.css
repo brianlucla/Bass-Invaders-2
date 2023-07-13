@@ -314,7 +314,7 @@ h1 {
 
 #log-in-btn {
     background-color: var(--pnk)!important;
-    border: 1px solid var(--pnk)
+    border: 1px solid var(--pnk);
     padding: 15px 30px !important;
     box-shadow: 0 0 20px var(--pnk);
 }
@@ -334,7 +334,7 @@ h1 {
 .form-control {
     background: white !important;
     border: none !important;
-    color: #ffffff !important;
+    color: purple !important;
     padding: 14px 16px;
 }
 

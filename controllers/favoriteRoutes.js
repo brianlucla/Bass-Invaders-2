@@ -13,9 +13,12 @@ router.get("/", withAuth, async (req, res) => {
       },
       include: [Song],
     });
+    
     const favorites = favoritesData.map((favorite) => {
-      favorite.get({ plain: true });
+      return favorite.get({ plain: true });
     });
+    console.log("FAVORITES: ", favorites);
+    
     res.render("favorites", {
       layout:"favoritesPage",
       favorites
