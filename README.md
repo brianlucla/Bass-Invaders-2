@@ -27,7 +27,7 @@ Experience the thrill of finding perfect tunes for your mood or activities, acco
 
 ## Installation
 
-Go to: (Heroku site)
+Go to: https://whispering-river-57701-843970124066.herokuapp.com/
 
 ## Usage
 
