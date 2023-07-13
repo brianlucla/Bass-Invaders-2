@@ -10,7 +10,9 @@ const baseApiUrlY = "https://www.googleapis.com/youtube/v3";
 
 router.get("/:id", async (req, res) => {
   try {
-    const playlistData = await Playlist.findByPk(req.params.id);
+    const playlistData = await Playlist.findByPk(req.params.id, {
+      include:[Song],
+    });
     res.json(playlistData);
   } catch (error) {
     res.status(500).json(error);
@@ -109,6 +111,8 @@ const giveSongs = async function (input, id) {
       }
     }
 
+    console.log("COMBINED SEARCH TERM: ", combinedSearchTerm);
+
     const apiURL = `${baseApiUrlY}/search?key=${process.env.YOUTUBE_KEY}&part=snippet&q=${combinedSearchTerm}&maxResults=1`;
 
     console.log(apiURL);
@@ -116,21 +120,25 @@ const giveSongs = async function (input, id) {
     const youtubeURL = await fetch(apiURL)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.items[0].id.videoId);
+        console.log("youtube api works");
+        console.log(data);
         console.log(
           `https://www.youtube.com/embed/${data.items[0].id.videoId}`
         );
         return `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
       });
+
     const songObject = {
       song_title: songTitle,
       artist: artistName,
       youtube_url: youtubeURL,
       playlist_id: id,
     };
+    console.log("SONG OBJECT: ", songObject);
     processedArray.push(songObject);
+    console.log("PROCESSED ARRAY: ", processedArray);
   }
-  console.log(processedArray);
+  
   return processedArray;
 };
 

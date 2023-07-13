@@ -28,6 +28,7 @@ const songHandler = async function (event) {
 
   let i = 1;
   const songData = await getSong.json();
+  console.log(songData);
   playlistEl.textContent = "";
   const mappedArray = songData.songs.map((song) => {
     playlistEl.textContent += `\n
