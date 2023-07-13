@@ -20,6 +20,9 @@ router.get('/invader', async(req, res)=>{
   }
 });
 
+router.get('*', async (req, res) => {
+  res.render('error')
+});
 
 
 module.exports = router
