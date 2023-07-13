@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { User, Playlist, Song } = require("../models");
 const withAuth = require('../helpers/auth');
 
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   // find all
   
   try {

@@ -12,6 +12,14 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/invader', async(req, res)=>{
+  try {
+    res.render('error');
+  } catch (error) {
+    res.status(404).json(error);
+  }
+});
+
 
 
 module.exports = router

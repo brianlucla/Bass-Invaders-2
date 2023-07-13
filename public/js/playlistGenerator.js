@@ -45,17 +45,21 @@ const songHandler = async function (event) {
 };
 
 const playlistCreate = async function () {
-  const playlistResponse = await fetch("/api/playlist", {
-    method: "POST",
-    body: JSON.stringify({
-      inputVal: inputEl.value,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  console.log(playlistResponse);
-  return playlistResponse.json();
+  if (!inputEl.value){
+    window.location.replace('invader');
+  } else{
+    const playlistResponse = await fetch("/api/playlist", {
+      method: "POST",
+      body: JSON.stringify({
+        inputVal: inputEl.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(playlistResponse);
+    return playlistResponse.json();
+  }
 };
 
 const favoritePlaylist = async function () {

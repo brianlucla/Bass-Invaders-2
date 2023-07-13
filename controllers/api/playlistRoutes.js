@@ -8,7 +8,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 const baseApiUrlY = "https://www.googleapis.com/youtube/v3";
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const playlistData = await Playlist.findByPk(req.params.id, {
       include:[Song],
@@ -19,12 +19,14 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   // create playlist
   try {
+    
     const playlistData = await Playlist.create({
       userId: req.session.userId,
     });
+    
     console.log("Playlist Data: ", playlistData);
     console.log("Input Value: ", req.body.inputVal);
     console.log("Playlist ID: ", playlistData.id);
@@ -36,18 +38,19 @@ router.post("/", async (req, res) => {
 
     //response
     res.json(playlistData);
+    
   } catch (error) {
     res.status(500).json(error);
   }
 });
 
-router.put("/", async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   try {
     const playlistData = await Playlist.update(
       { favorite: true },
       {
         where: {
-          id: req.body.id,
+          id: req.params.id,
         },
       }
     );
@@ -58,7 +61,7 @@ router.put("/", async (req, res) => {
   }
 });
 
-router.delete("/", async (req, res) => {
+router.delete("/", withAuth, async (req, res) => {
   try {
     const playlistData = await Playlist.destroy({
       where: {
