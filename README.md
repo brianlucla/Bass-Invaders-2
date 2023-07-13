@@ -5,12 +5,6 @@
 # Bass Invaders
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-###
-
-<img src="https://raw.githubusercontent.com/meeekkksss/meeekkksss/output/snake.svg" alt="Snake animation" />
-
-###
-
 ## Description
 
 Introducing a breathtaking fusion of music and technology! Our innovation combines multiple restful APIs, including YouTube and ChatGPT, to bring you a personalized song search like never before.
