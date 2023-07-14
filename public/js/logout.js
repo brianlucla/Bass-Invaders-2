@@ -14,6 +14,7 @@ const logoutHandler = async function(event){
 
   if(response.ok){
     alert('Logout success!');
+    window.location.replace('/');
   } else {
     alert('Failed to sign out!');
   }

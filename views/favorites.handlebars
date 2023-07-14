@@ -3,9 +3,9 @@
         <div class="container-fluid">
             <h2>Your Favorites</h2>
             <div id="favoritesCarousel" class="carousel slide" data-bs-ride="carousel">
-                
+                {{#each favorites}}
                 <div class="carousel-inner">
-                    {{#each favorites}}
+                    
                     <div class="carousel-item {{#if @first}}active{{/if}}">
                         <div class="row justify-content-center" id="favoritesPlaylist">
                             {{#each songs}}
@@ -17,11 +17,12 @@
                                         <a href={{youtube_url}} class="btn btn-primary">Watch Video</a>
                                     </div>
                                 </div>
+                            
                             </div>
                             {{/each}}
                         </div>
                     </div>   
-                    {{/each}}
+                {{/each}}
                 </div>
                 
                 <button class="carousel-control-prev" type="button" data-bs-target="#favoritesCarousel"
